@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&family=Raleway:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap');
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*1 rem = 10px*/
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+/* Globales */
+h1, h2, h3, h4 {
+    font-size: #000;
+    font-family: 'Playfair Display', serif;;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.contenedor-navegacion{
+    border-top: solid 1px #e1e1e1;
+    
+}
+/* Header y Navegación */
+
+.nav-principal{
+    padding:2rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nombre-sitio{
+    margin: 5rem 0;
+    text-align: center;
+}
+
+.nombre-sitio span {
+    color: #037bc0;
+}
+
+.hero{
+    background-image: url(../img/principal.jpg);
+    background-repeat: none;
+    background-size: cover;
+    height: 55rem;
+}
+
+.listado-categorias{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+
+.categorias h2{
+    text-align: center;
+}
+
+.categoria a{
+    display:block;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+}
+.categoria a:hover{
+    background-color: #037bc0;
+    color: #ffffff;
+    border-bottom-right-radius: 2rem;
+}
