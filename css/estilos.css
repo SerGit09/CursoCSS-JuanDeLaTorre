@@ -1,13 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&family=Raleway:wght@400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;700&display=swap');
+
 html{
     box-sizing: border-box;
     font-size: 62.5%; /*1 rem = 10px*/
-}
-
-body{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.6rem;
 }
 
 *,
@@ -16,10 +11,29 @@ body{
     box-sizing: inherit;
 }
 
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+
 /* Globales */
-h1, h2, h3, h4 {
-    font-size: #000;
-    font-family: 'Playfair Display', serif;;
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin:0 0 5rem 0;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+h2{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 3rem;
 }
 
 a{
@@ -36,23 +50,41 @@ img{
     max-width: 120rem;
     margin: 0 auto;
 }
+.btn{
+    background-color: #8cbc00;
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-in;
+    text-align: center;
+}
+
+.btn:hover{
+    background-color: #769c02;
+}
+
+/* Utilidades */
+.text-center{
+    text-align: center;
+}
+
+.max-width-30{
+    max-width: 30rem;
+}
+
+/* Header y Navegación */
 
 .contenedor-navegacion{
     border-top: solid 1px #e1e1e1;
     
 }
-/* Header y Navegación */
-
 .nav-principal{
     padding:2rem 0;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-}
-
-.nombre-sitio{
-    margin: 5rem 0;
-    text-align: center;
 }
 
 .nombre-sitio span {
@@ -63,7 +95,14 @@ img{
     background-image: url(../img/principal.jpg);
     background-repeat: none;
     background-size: cover;
+    background-position: center center;
     height: 55rem;
+}
+
+/* Categorias */
+
+.categorias{
+    padding-top: 5rem;
 }
 
 .listado-categorias{
@@ -86,4 +125,209 @@ img{
     background-color: #037bc0;
     color: #ffffff;
     border-bottom-right-radius: 2rem;
+}
+
+/* Sobre nosotros */
+.sobre-nosotros{
+    padding-top: 5rem;
+    background-image: linear-gradient(to right, transparent 50%,#037bc0 50% ,#037bc0 100%), url(../img/nosotros.jpg);
+    padding: 10rem 0;
+    background-position: left center;
+    background-repeat: no-repeat;
+    /* El linear gradiente al 100% y 120 rem la imagen */
+    background-size: 100%, 120rem;
+}
+
+/* Se puede acomodar tanto con grid como con flexbox */
+.sobre-nosotros-grid{
+    /* display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 4rem; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.texto-nosotros{
+    /* grid-column: 2 / 3; */
+    flex-basis: 50%;
+    padding-left: 8rem;
+    color: #fff;
+}
+
+/* Listado de productos */
+.contenido-principal{
+    padding-top: 5rem;
+}
+
+.listado-productos{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 2rem;
+}
+
+.producto:nth-child(1){
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.producto:nth-child(1) img{
+    height: 43rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.producto:nth-child(2){
+    grid-column: 1 / 4;
+}
+
+.producto:nth-child(3){
+    grid-column: 4 /-1;
+}
+
+.producto:nth-child(4){
+    grid-column: 1/3;
+}
+
+.producto:nth-child(5){
+    grid-column: 3/5;
+}
+
+.producto:nth-child(6){
+    grid-column: 5/7;
+}
+
+.producto{
+    background-color: #037bc0;
+}
+
+.texto-producto{
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+}
+
+.texto-producto h3 {
+    margin: 0;
+}
+
+.texto-producto p{
+    margin: 0 0 .5rem 0;
+}
+
+.texto-producto .precio{
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.texto-producto a{
+    background-color: #8cbc00;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-in;
+}
+
+.texto-producto a:hover{
+    background-color: #769c02;
+}
+
+/* Footer */
+.site-footer{
+    margin-top: 5rem;
+    border-top: 1px solid #cecece;
+    padding-top: 5rem;
+}
+
+.site-footer h3{
+    margin: 0.5rem;
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+
+/* .site-footer nav{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+} */
+
+.footer-menu a{
+    display: block;
+    padding-bottom: 1rem;
+}
+
+.copy-right{
+    margin-top: 5rem;
+}
+
+/* Pagina Nosotros */
+.contenido-nosotros{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit,minmax(25rem, 1fr));
+    gap: 2rem;
+}
+
+.informacion-nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Blog */
+.contenedor-blog{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.entrada{
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type{
+    border: none    ;
+}
+
+.entrada-meta{
+    display: flex;
+    justify-content: space-between;
+}
+
+.entrada-meta p{
+    font-weight: bold;
+}
+
+.entrada-meta span{
+    color: #037bc0;
+}
+
+/* Entrada BLOG */
+.contenido-entrada-blog{
+    width: 60rem;
+    margin: 0 auto;
+}
+/* Galeria */
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 2rem;
+}
+
+.galeria img{
+    height: 40rem;
+    width: 40rem;
+    object-fit: cover;
 }
