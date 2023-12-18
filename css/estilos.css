@@ -59,10 +59,12 @@ img{
     padding: 1rem;
     transition: background-color .3s ease-in;
     text-align: center;
+    border: none;
 }
 
 .btn:hover{
     background-color: #769c02;
+    cursor: pointer;
 }
 
 /* Utilidades */
@@ -330,4 +332,52 @@ img{
     height: 40rem;
     width: 40rem;
     object-fit: cover;
+}
+
+.formulario{
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.formulario fieldset{
+    border: 1px solid #000;
+    margin-bottom: 2rem;
+}
+
+.formulario legend{
+    background-color: #005485;
+    width: 100%;
+    text-align: center;
+    color: #ffff;
+    padding: 1rem 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo label{
+    /* Para que queden alineados */
+    flex-basis: 10rem;
+}
+
+/* UNA OPCION PARA COLCARLE LOS ESTILOS A LOS INPUTS */
+/* .campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="tel"]{
+    flex: 1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+} */
+
+.campo input:not([type="radio"]),
+textarea,
+select{
+    flex: 1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
 }
