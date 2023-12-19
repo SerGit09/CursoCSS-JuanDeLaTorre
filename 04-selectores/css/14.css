@@ -1,0 +1,9 @@
+/* todos los elementos excepto 1 */
+/* p:not(.texto){
+    color: red;
+} */
+
+/* PARA SELECCIONAR MAS DE UNA */
+p:not(.texto):not(.descripcion){
+    color: red;
+}

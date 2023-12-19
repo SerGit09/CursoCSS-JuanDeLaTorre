@@ -1,0 +1,27 @@
+.oferta{
+    background-color: #00446e;
+    padding: 2rem;
+    text-align: center;
+}
+
+.precio{
+    font-size: 4rem;
+    margin: 0;
+}
+
+@media (min-width:600px){
+    .oferta{
+        margin: 0 auto;
+        max-width: 40rem;
+    }
+
+    .precio{
+        font-size: 6rem;
+    }
+}
+
+@media (min-width:800px){
+    .oferta{
+        max-width: 60rem;
+    }
+}

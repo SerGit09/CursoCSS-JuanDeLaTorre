@@ -1,0 +1,14 @@
+/* REEMPLAZA LA N POR 1,2,3, DE FORMA CONSECUTIVA */
+/* ul li:nth-child(2n + 1){
+    border: 2px solid red;
+} */
+
+/* NUMERO NONES */
+/* ul li:nth-child(odd){
+    border: 2px solid red;
+} */
+
+/* NUMEROS PARES */
+ul li:nth-child(even){
+    border: 2px solid red;
+}

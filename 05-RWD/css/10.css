@@ -1,0 +1,5 @@
+img{
+    /* Se coloca max-width para evitar que una imagen pequeña crezca mas de lo que es su tamaño natural */
+    max-width: 100%;
+    display: block;
+}

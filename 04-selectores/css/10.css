@@ -1,0 +1,13 @@
+/* TODOS LOS QUE INICIEN CON ESO */
+/* a[href^="http"]{
+    color: red;
+} */
+
+/* QUE FINALICEN CON */
+a[href$="http"]{
+    color: red;
+}
+
+input[type="tel"]{
+    border: 5px solid red;
+}
