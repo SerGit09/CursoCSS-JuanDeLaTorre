@@ -39,9 +39,6 @@ img {
 .contenedor {
     
 }
-.mask{
-    overflow: hidden;
-}
 
 [class $="__contenedor"]{
     max-width: 120rem;
@@ -206,6 +203,7 @@ img {
 
 .listado__heading{
     font-size: 3rem;
+    font-weight: 900;
     color: var(--primario);
     margin: 0;
 }
@@ -217,14 +215,36 @@ img {
 
 .seguridad{
     background-color: var(--primario);
-    padding: 10rem 0;
-    transform: rotate(3deg) scale(1.5);
-    margin: 30rem 0;
+    padding: 20rem 0;
+    /* Hace para que puedan posicionarse los hijos y que los absolute lo tomen como referencia*/
+    position: relative;
+    margin: 10rem 0;
+    overflow: hidden;
 }
 
-.seguridad__contenedor{
-    transform: rotate(-3deg) scale(.75);
+.seguridad::before,
+.seguridad::after{
+    content: '';
+    height: 20rem;
+    background-color: var(--blanco);
+    width: 120%;
+    position: absolute;
 }
+
+.seguridad::after{
+    transform: rotate(-3deg);
+    bottom: -10rem;
+    left: 0;
+}
+
+.seguridad::before{
+    top: -10rem;
+    left: 0;
+    transform: rotate(3deg);
+}
+
+
+
 
 .seguridad__heading{
     color: var(--blanco);
@@ -238,3 +258,5 @@ img {
         align-items: center;
     }
 }
+
+
