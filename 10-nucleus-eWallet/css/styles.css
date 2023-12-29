@@ -37,10 +37,23 @@ img {
     display: block;
 }
 .contenedor {
+    
+}
+.mask{
+    overflow: hidden;
+}
+
+[class $="__contenedor"]{
     max-width: 120rem;
     margin: 0 auto;
     width: 90%;
 }
+
+[class$="__heading"]{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
 
 /* Header */
 .header{
@@ -76,12 +89,6 @@ img {
     }      
 }
 
-.header__contenedor{
-    max-width: 120rem;
-    margin: 0 auto;
-    width: 90%;
-}
-
 .header__logo{
     width: 15rem;
     margin: 0 auto 3rem auto;
@@ -101,7 +108,6 @@ img {
 }
 
 .header__heading{
-    text-align: center;
     font-size: 3rem;
 }
 
@@ -153,5 +159,82 @@ img {
 @media (min-width: 768px){
     .navegacion__enlace{
         color: var(--blanco);
+    }
+}
+
+/* Nucleus */
+.nucleus{
+    margin-top: 3rem;
+}
+
+.nucleus__heading{
+    margin-bottom: 2rem;
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+/* Esto se aplico para en la vista movil se pueda ver las caracteristicas primero */
+.nucleus__grid{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@media (min-width:768px) {
+    .nucleus__grid{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 5rem;
+        align-items: center;
+    }
+}
+
+.listado{
+
+}
+
+.listado__elemento{
+    background-color: var(--blanco);
+    box-shadow: 0px 0px 15px 3px rgb(0 0 0 /30);
+    padding: 2rem;
+    margin-bottom: 5rem;
+    transition: transform .3s;
+}
+
+.listado__elemento:hover{
+    transform: scale(1.1);
+}
+
+.listado__heading{
+    font-size: 3rem;
+    color: var(--primario);
+    margin: 0;
+}
+
+.listado__texto{
+    margin: 0;
+    font-size: 2rem;
+}
+
+.seguridad{
+    background-color: var(--primario);
+    padding: 10rem 0;
+    transform: rotate(3deg) scale(1.5);
+    margin: 30rem 0;
+}
+
+.seguridad__contenedor{
+    transform: rotate(-3deg) scale(.75);
+}
+
+.seguridad__heading{
+    color: var(--blanco);
+}
+
+@media (min-width:768px) {
+    .seguridad__grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 5rem;
+        align-items: center;
     }
 }
