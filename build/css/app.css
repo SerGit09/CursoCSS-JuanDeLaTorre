@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.nav {
+  background-color: blue;
+  text-align: center;
+}
+
+body {
+  background-color: red;
+  display: flex;
+  gap: 2rem;
+}
+
+h1 {
+  color: blue;
+  text-align: center;
+}
+
+div {
+  display: grid;
+  grid-template-columns: 3rem;
+}
