@@ -1,4 +1,39 @@
-.nav{
-    background-color: blue;
-    text-align: center;
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+@use 'sass:math';
+
+.nav-principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: v.$blanco;
+    margin-top: 5rem;
+
+    @include m.tablet { 
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+    }
+
+    a{
+        color: v.$blanco;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 1rem;
+
+        &:hover{
+            color: v.$secundario;
+        }
+
+        @include m.tablet { 
+            margin-bottom: 0;
+        }
+
+        &.activo{
+            color: v.$secundario;
+        }
+    }
+
+
 }

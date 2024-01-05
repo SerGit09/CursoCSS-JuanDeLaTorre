@@ -1,0 +1,9 @@
+//Nos va a servir para incluir archivos dentro de otro pero nadamas los va a incluir servir como indice
+@forward 'normalize';
+@forward 'variables';
+@forward 'mixins';
+@forward 'globales';
+@forward 'tipografia';
+@forward 'utilidades';
+//Van a incluirlos pero tambien van a utilizar el contenido, hacer uso de ese contenido
+// @use y @import
